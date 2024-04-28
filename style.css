@@ -226,7 +226,7 @@ h4 {
     box-shadow: 0 0 10px black;
     height: 25%;
     border-radius: 15px;
-    background: url("/Assets/Backgrounds/6.png");
+    background: url("./Assets/Backgrounds/6.png");
     background-size: cover;
 }
 

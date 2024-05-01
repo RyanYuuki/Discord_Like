@@ -5,12 +5,12 @@
     
     @font-face {
       font-family: Poppins-Bold;
-      src: url("/Assets/Fonts/Poppins-Bold.ttf");
+      src: url("Assets/Fonts/Poppins-Bold.ttf");
     }
     
     @font-face {
       font-family: Poppins-Bold2;
-      src: url("/Assets/Fonts/Poppins-ExtraBold.ttf");
+      src: url("Assets/Fonts/Poppins-ExtraBold.ttf");
     }
 
 body {
@@ -60,6 +60,10 @@ body {
     background-color: rgb(255, 255, 255, 0.2);
 }
 
+.Users {
+    border: 3px solid;
+}
+
 .userBar div {
     height: 40px;
     width: 40px;
@@ -69,10 +73,15 @@ body {
     transition: 0.2s ease;
     box-shadow: inset 0 0 15px lightpink;
     z-index: 99;
+    transform: translateY(150%);
+    display: grid;
+    place-items: center;
+    font-size: 25px;
 }
 
 .userBar div:hover {
-    transform: scale(1.2);
+    height: 50px;
+    width: 50px;
 }
 
 /* .userBar:first-child::before {
@@ -106,11 +115,12 @@ body {
     border: none;
 }
 
-.userBar :nth-child(2) {
-    margin-bottom: 30px;
+.userBar .currentUser {
+    position: absolute;
+    top: 10%;
 }
-
- .userBar::before {
+ 
+.userBar::before {
     content: '';
     position: absolute;
     bottom: 10%;
@@ -140,17 +150,21 @@ body {
     transform: translateX(-10px);
 }
 
-.Explore div:hover {
+.Explore .Channels div:hover {
     color: black;
     background: white;
     transform: scale(1.1);
 }
 
-h4 {
-    transform: translateY(-20px);
+.Channels {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
 }
 
-.Explore div {
+.Explore .Channels div {
     width: 60%;
     padding: 4px 20px;
     font-size: 15px;
@@ -167,8 +181,8 @@ h4 {
     position: absolute;
     width: 100%;
     height: 10%;
-    border: 1px solid;
-    bottom: 55px;
+    border: 0.1px solid;
+    bottom: 9%;
     background: rgb(255, 255, 255, 0.1);
 }
 
@@ -177,7 +191,7 @@ h4 {
     bottom: 0;
     height: 9%;
     width: 100%;
-    border: 0.5px solid;
+    border: 0.1px solid;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -189,7 +203,7 @@ h4 {
     flex-direction: column;
     width: 50%;
     border-right: 1px solid;
-    background-color: rgb(0, 0, 0, 0.7);
+    background-color: rgb(255, 255, 255, 0.1);
 }
 
 .searchBar {
@@ -226,7 +240,7 @@ h4 {
     box-shadow: 0 0 10px black;
     height: 25%;
     border-radius: 15px;
-    background: url("./Assets/Backgrounds/6.png");
+    background: url("Assets/Backgrounds/6.png");
     background-size: cover;
 }
 
@@ -260,7 +274,7 @@ h4 {
     height: 90%;
     border-radius: 10px;
     width: 40%;
-    background: url("/Assets/Backgrounds/6.png");
+    background: url("Assets/Backgrounds/6.png");
     background-size: cover;
     text-wrap: wrap;
     overflow: none;
@@ -318,13 +332,15 @@ h4 {
 .Featured .Title {
     width: 100%;
     display: flex;
-    gap: 60%;
+    gap: 69%;
+    font-family: Poppins-Bold;
 }
 
 .Popular .Title {
     width: 100%;
     display: flex;
-    gap: 65%;
+    gap: 72%;
+    font-family: Poppins-Bold;
 }
 
 .Info {
@@ -332,7 +348,7 @@ h4 {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 22%;
+    width: 25%;
 }
 
 .Info .Settings {
@@ -357,12 +373,12 @@ h4 {
 .Info .ProfileInfo .Icon {
     width: 70px;
     height: 70px;
-    margin-top: 10px;
+    margin-top: 10%;
     border: 3px solid;
     border-color: lightblue;
     box-shadow: 0 0 10px lightblue;
     border-radius: 50px;
-    background-image: url("/Assets/userIcons/2.png");
+    background-image: url("Assets/userIcons/2.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -419,7 +435,7 @@ h4 {
     gap: 5px;
     height: 20%;
     width: 100%;
-    border: 1px solid;
+    border-top: 1px solid;
 }
 
 .SocialPanels div {
@@ -439,9 +455,9 @@ h4 {
 
 .User img {
     position: absolute;
-    left: 5px;
+    left: 5%;
     height: 40px;
     width: 40px;
     border-radius: 50px;
-    top: 5px;
+    top: 20%;
 } 
